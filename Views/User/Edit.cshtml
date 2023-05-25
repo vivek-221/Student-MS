@@ -1,0 +1,34 @@
+﻿@model UserDetails
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 m-8" style="width:100%">
+        <div class="row pb-2">
+            <h2 class="text-muted"> Update Student Details</h2>
+        </div>
+        <br />
+        <div style="border:solid; color:lightslategrey;width:100%">
+        </div>
+        <br />
+        <div class="row ml-2 mb-2">
+            <label class="text-muted mt-2" asp-for="Name"></label> &nbsp
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <label class="text-muted mt-2" asp-for="Email"></label> &nbsp
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <br />
+            <br />
+            <div class="ml-2">
+            <button type="submit" class="btn btn-dark mt-3" style="width:150px;">Update</button> &nbsp &nbsp; &nbsp; 
+            <a asp-controller="User" asp-action="Index" class="btn btn-secondary mt-3" style="width:150px;">Back to List</a>
+        </div>
+        </div>
+    </div>
+    
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
