@@ -98,7 +98,7 @@ namespace SampleApp.Controllers
 
             _db.Users.Remove(obj);
             _db.SaveChanges();
-            TempData["success"] = "Student deleted successfully";
+            TempData["success"] = "Student Record Deleted Successfully";
             return RedirectToAction("Index");
 
         }
